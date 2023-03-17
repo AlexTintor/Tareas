@@ -1,0 +1,38 @@
+
+
+package metodos;
+import java.util.*;
+
+public class Metodos {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int opc;
+        System.out.println("Metodo a llamar");
+        opc=sc.nextInt();
+        switch(opc){
+            case 2:
+                String var;
+                System.out.println("Introduce el String: ");
+                sc.nextLine();
+                var=sc.nextLine();
+                System.out.println(met2(var));
+        }
+        
+        
+        
+    }
+
+    public static int met2(String var){
+        int cont=0;
+        for(int i=0; i<var.length();i++){
+            if(Character.isDigit(var.charAt(i))){
+                cont++;
+            }
+        }
+        return cont;
+        
+    }
+
+    
+}    
